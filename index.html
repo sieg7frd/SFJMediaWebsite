@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SFJ Media | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+
+
+<body>
+  <header>
+    <img src="./logo.png">
+    <ul>
+      <li> <a href="#home">HOME</a></li>
+      <li> <a href="#services">SERVICES</a></li>
+      <li> <a href="https://sites.google.com/jmc.edu.ph/sfjmedia-samplevideos?usp=sharing">SAMPLE WORKS</a></li>
+      <li> <a href="#contact">CONTACT</a></li>
+    </ul>
+
+  </header>
+  <div class="" id="home">
+    <img src="./logo.png" alt="logo">
+    <h1>Crafting Moments,<br>
+      Elevating Stories</h1>
+    <p>Crafting Moments, Elevating Stories</p>  
+  </div>
+  <div class="fadein" id="services">
+    <h2 text>HELPING YOUR BUSINESS, CHANNEL <br>
+        OR ACCOUNT GROW IN DIFFERENT <br>
+        SOCIAL MEDIA PLATFORMS BY  PROVIDING <br>
+        QUALITY VIDEO-EDITING SERVICES
+    </h2>
+    <iframe width="304" height="205" class="sample" src="https://www.youtube.com/embed/kFcAwxy_d4I?si=W2CvBSWMALXXHAN6&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h3>FOR MORE SAMPLES: <br> <a href="https://sites.google.com/jmc.edu.ph/sfjmedia-samplevideos?usp=sharing">CLICK HERE</a></h3>
+  </div>
+  <div class="fadein" id="contact">
+    <div class="socials" id="facebook">
+      <img src="./Icons/facebook.png" alt="">
+      <a href="https://www.facebook.com/profile.php?id=61555503059271">SFJ MEDIA</a>
+    </div>
+    <div class="socials" id="instagram">
+      <img src="./Icons/instagram.png" alt="">
+      <a href="https://www.instagram.com/sfjmedia?igsh=MWltd2tjMmNhbzhjZA==">@SFJMEDIA</a>
+    </div>
+    <div class="socials" id="x"> 
+      <img src="./Icons/twitter.png" alt="">
+      <a href="https://x.com/sfjmedia?t=rdepaVhCaPoQP4jp5Nllog&s=09">@SFJMEDIA</a>
+    </div>
+    <div class="socials" id="email">
+        <img src="./Icons/email.png" alt="">
+        <a href="mailto:sfjmedia.prod@gmail.com">SFJMEDIA.PROD@GMAIL.COM</a>
+    </div>
+  </div>
+  <footer>
+    <h4>©SFJMEDIA 2024</h4>
+    <h5>PUROK 25-C, MALUPIHA. MALAGAMOT ROAD, PANACAN <br>
+      DAVAO CITY, DAVAO DEL SUR, PHILIPPINES 8000</h5>
+  </footer>
+
+</body>
+
+<script>
+  const sections = document.querySelectorAll('.fadein');
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5, // Adjust the threshold as needed
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+
+
+  
+
+</html>
